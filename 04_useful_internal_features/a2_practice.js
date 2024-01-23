@@ -18,3 +18,10 @@ const data = [{
 ];
 
 // 여기에 코드를 작성해 주세요.
+data.forEach((item, i) => {
+  const li = document.createElement('li');
+  li.classList.add('item');
+  if (item.isClear) li.classList.add('done');
+  li.textContent = `${i + 1}. ${item.title}`;
+  list.append(li);
+});
